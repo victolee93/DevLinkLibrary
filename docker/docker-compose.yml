@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  db:
+    image: mariadb:10.5
+    volumes:
+      - ./mariadb/init:/docker-entrypoint-initdb.d
+      - ./mariadb/data:/var/lib/mysql
+    restart: always
+    container_name: devlink-local-db
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD="true"
+      - MYSQL_ROOT_PASSWORD=manager
+      - TZ=Asia/Seoul
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
