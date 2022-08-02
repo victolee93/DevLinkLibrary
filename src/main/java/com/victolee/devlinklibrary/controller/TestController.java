@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @AllArgsConstructor
 public class TestController {
-    @GetMapping("/")
-    public String list() {
-        return "foo";
+    @GetMapping("/api")
+    public String main() {
+        return "hello";
     }
 }

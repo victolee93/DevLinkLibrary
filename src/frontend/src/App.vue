@@ -5,11 +5,17 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import axios from "axios";
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  mounted(){
+    axios.get('http://localhost:8080/api').then((response) => { // 실제 API를 요청한다/
+      console.log(response.data);
+    })
   }
 }
 </script>
