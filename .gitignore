@@ -15,4 +15,4 @@ out/
 !**/src/test/**/out/
 
 ### custom ###
-docker/mariadb/data/
+docker/mariadb/data/**
