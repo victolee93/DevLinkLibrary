@@ -1,4 +1,6 @@
-const { defineConfig } = require('@vue/cli-service')
+const { defineConfig } = require('@vue/cli-service');
+const path = require('path');
+
 module.exports = defineConfig({
   transpileDependencies: true,
   devServer: {
@@ -9,5 +11,6 @@ module.exports = defineConfig({
         changeOrigin: true
       }
     }
-  }
+  },
+  outputDir: path.resolve(__dirname, "../main/resources/static")
 })
